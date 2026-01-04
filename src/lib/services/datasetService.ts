@@ -1,6 +1,9 @@
 // 前端数据集服务层
 // 封装数据集相关的 API 调用
 
+// API 基础地址 - 开发时连接 Python 后端，生产环境可配置
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+
 export interface Dataset {
   path: string;
   type: string;
@@ -20,7 +23,7 @@ export interface DatasetsResponse {
 
 // 获取所有数据集
 export async function getDatasets(): Promise<DatasetsResponse> {
-  const response = await fetch('/api/datasets');
+  const response = await fetch(`${API_BASE_URL}/api/datasets`);
   return response.json();
 }
 
