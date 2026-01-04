@@ -1,0 +1,214 @@
+{
+      "pbmc" : {
+            "path"  : "/work/leilab/yangqin/Project/10_webapp/Webapp_scRNAseq/inputData/pbmc3k.h5ad", 
+            "type" : "louvain",
+            "obsm" : "X_tsne",
+            "layers" : "normalized",
+            "reference" : "Peripheral Blood Mononuclear Cells"
+      },
+      "sperm_tang" : {
+            "path"  : "/work/leilab/yangqin/Project/10_webapp/Webapp_scRNAseq/inputData/reftang.h5ad", 
+            "type" : "celltype",
+            "obsm" : "X_tsne",
+            "layers" : "logcounts",
+            "reference" : "Wang M, Liu X, Chang G, et al. **Single-Cell RNA Sequencing Analysis Reveals Sequential Cell Fate Transition during Human Spermatogenesis.** Cell Stem Cell. 2018 Oct;23(4):599-614.e4. DOI: 10.1016/j.stem.2018.08.007"
+      },
+      "embyro_tang" :{
+            "path"  : "/work/leilab/yangqin/Project/10_webapp/Webapp_scRNAseq/inputData/embryo_tang_scrnaseq.h5ad", 
+            "type" : "celltype",
+            "obsm" : "X_tsne",
+            "layers" : "logcounts",
+            "reference" : "Yan, L., Yang, M., Guo, H. et al. **Single-cell RNA-Seq profiling of human preimplantation embryos and embryonic stem cells.** Nat Struct Mol Biol 20, 1131-1139 (2013). https://doi.org/10.1038/nsmb.2660"
+      },
+      "adipose" : {
+            "path"  : "/work/leilab/yangqin/Project/3_singcellseq/7_stemcell/results/adipose/GSE176171/adipose.streamlit.h5ad", 
+            "type" : "cell_type2",
+            "obsm" : "X_umap",
+            "layers" : "logcounts",
+            "reference" : "Emont, M.P., Jacobs, C., Essene, A.L. et al. **A single-cell atlas of human and mouse white adipose tissue.** Nature 603, 926-933 (2022). https://doi.org/10.1038/s41586-022-04518-2"
+      },          
+      "ASPC" :{
+            "path"  : "/work/leilab/yangqin/Project/3_singcellseq/7_stemcell/results/adipose/GSE176171/adata_CytoTRACE.h5ad", 
+            "type" : "broad_clusters",
+            "obsm" : "X_umap",
+            "layers" : "normalized",
+            "reference" : "Emont, M.P., Jacobs, C., Essene, A.L. et al. **A single-cell atlas of human and mouse white adipose tissue.** Nature 603, 926-933 (2022). https://doi.org/10.1038/s41586-022-04518-2"
+      },
+      "pituitary" : {
+            "path"  : "/work/leilab/yangqin/Project/3_singcellseq/7_stemcell/results/pituitary/GSE142653/adata_scanpy.h5ad", 
+            "type" : "cell_type",
+            "obsm" : "X_umap",
+            "layers" : "logcounts",
+             "reference" : "Zhang, S., Cui, Y., Ma, X. et al. **Single-cell transcriptomics identifies divergent developmental lineage trajectories during human pituitary development.** Nat Commun 11, 5275 (2020). https://doi.org/10.1038/s41467-020-19012-4"
+      },
+      "SVZ" : {
+            "path"  : "/work/leilab/yangqin/Project/3_singcellseq/7_stemcell/results/SVZ/GSE217511/adata_CytoTRACE.h5ad", 
+            "type" : "celltypes",
+            "obsm" : "X_umap",
+            "layers" : "normalized",
+            "reference" : "Ramos, S.I., Mussa, Z.M., Falk, E.N. et al. **An atlas of late prenatal human neurodevelopment resolved by single-nucleus transcriptomics.** Nat Commun 13, 7671 (2022). https://doi.org/10.1038/s41467-022-34975-2"
+      },
+      "hUC" : {
+            "path"  : "/work/leilab/yangqin/Project/3_singcellseq/7_stemcell/results/hUC/adata_hUC.h5ad",
+            "type" : "manual_celltype_annotation",
+            "obsm" : "X_umap",
+            "layers" : "normalized",
+            "reference" : "Zhang, S., Wang, J.Y., Li, B. et al. Single-cell transcriptome analysis of uncultured human umbilical cord mesenchymal stem cells. Stem Cell Res Ther 12, 25 (2021). https://doi.org/10.1186/s13287-020-02055-1"
+      },  
+      "fetalHSCs" : {
+            "path"  : "/work/leilab/yangqin/Project/0_Article_reproduction/integrative-scrna-scatac-human-foetal-master/Data/ScanpyObjets/MergedAllSamples_annotated.h5ad",
+            "type" : "manual_annotation",
+            "obsm" : "X_umap",
+            "layers" : "log",
+            "reference" : "Ranzoni AM, Tangherloni A, Berest I, et al (2021) Integrative Single-Cell RNA-Seq and ATAC-Seq Analysis of Human Developmental Hematopoiesis. Cell Stem Cell 28:472-487.e7. https://doi.org/10.1016/j.stem.2020.11.015"
+      }, 
+      "hUCblood" : {
+            "path"  : "/work/leilab/yangqin/Project/3_singcellseq/7_stemcell/results/hUCblood/adata_hUCblood_streamlit.h5ad",
+            "type" : "manual_celltype_annotation",
+            "obsm" : "X_umap",
+            "layers" : "normalized",
+            "reference" : "Zheng S, Papalexi E, Butler A, et al (2018) Molecular transitions in early progenitors during human cord blood hematopoiesis. Mol Syst Biol 14:e8041. https://doi.org/10.15252/msb.20178041"
+      },   
+      "skeletalSC" : {
+            "path"  : "/work/leilab/yangqin/Project/3_singcellseq/7_stemcell/results/skeletalSC/adata_sksc_streamlit.h5ad",
+            "type" : "leiden",
+            "obsm" : "X_umap",
+            "layers" : "normalized",
+            "reference" : "Chan CKF, Gulati GS, Sinha R, et al (2018) Identification of the Human Skeletal Stem Cell. Cell 175:43-56.e21. https://doi.org/10.1016/j.cell.2018.07.029"
+      },  
+      "GW21_GW26_RGCs" : {
+            "path"  : "/work/leilab/yangqin/Project/3_singcellseq/7_stemcell/results/SVZ/GSE144462/adata.seurat.h5ad",
+            "type" : "types",
+            "obsm" : "X_tsne",
+            "layers" : "logcounts",
+            "reference" : "Fu Y, Yang M, Yu H, et al (2021) Heterogeneity of glial progenitor cells during the neurogenesis-to-gliogenesis switch in the developing human cerebral cortex. Cell Rep 34:108788. https://doi.org/10.1016/j.celrep.2021.108788"
+      },      
+      "Dental pulp" : {
+            "path"  : "/work/leilab/yangqin/Project/3_singcellseq/7_stemcell/results/tooth/GSE161267/adata.scanpy.h5ad",
+            "type" : "celltype",
+            "obsm" : "X_umap",
+            "layers" : "logcounts",
+            "reference" : "Pagella, Pierfrancesco et al. \"A single-cell atlas of human teeth.\" iScience vol. 24,5 102405. 23 Apr. 2021, doi:10.1016/j.isci.2021.102405IF: 5.8 Q1"
+      },   
+      "lung ProxhNorm" : {
+            "path"  : "/work/leilab/yangqin/Project/3_singcellseq/7_stemcell/results/lung/GSE168191/adata_scanpy_EpiCells.h5ad",
+            "type" : "celltype",
+            "obsm" : "X_umap",
+            "layers" : "normalized",
+            "reference" : "Basil, M.C., Cardenas-Diaz, F.L., Kathiriya, J.J. et al. Human distal airways contain a multipotent secretory cell that can regenerate alveoli. Nature 604, 120-126 (2022). https://doi.org/10.1038/s41586-022-04552-0"
+      },     
+      "lung epi" : {
+            "path"  : "/work/leilab/yangqin/Project/3_singcellseq/7_stemcell/results/lung/GSE178360/adata_scanpy_epi.h5ad",
+            "type" : "cell_type",
+            "obsm" : "X_umap",
+            "layers" : "normalized",
+            "reference" : "Kadur Lakshminarasimha Murthy P, Sontake V, Tata A, Kobayashi Y, Macadlo L, Okuda K, Conchola AS, Nakano S, Gregory S, Miller LA, Spence JR, Engelhardt JF, Boucher RC, Rock JR, Randell SH, Tata PR. Human distal lung maps and lineage hierarchies reveal a bipotent progenitor. Nature. 2022 Apr;604(7904):111-119. doi: 10.1038/s41586-022-04541-3IF: 64.8 Q1 . Epub 2022 Mar 30."
+      },   
+       "HSC CD34Pos" : {
+            "path"  : "/work/leilab/yangqin/Project/3_singcellseq/7_stemcell/results/HSC/GSE224714/adata_scanpy_CD34Pos_AA.h5ad",
+            "type" : "CellType_major",
+            "obsm" : "X_umap",
+            "layers" : "normalized",
+            "reference" : "Yingying Huo et al. ,Single-cell dissection of human hematopoietic reconstitution after allogeneic hematopoietic stem cell transplantation. Sci. Immunol.8,eabn6429(2023). DOI:10.1126/sciimmunol.abn6429"
+      }, 
+      "MXH" : {
+            "path"  : "/work/leilab/yangqin/Project/3_singcellseq/7_stemcell/Data/ZHL_MXH.h5ad",
+            "type" : "label",
+            "obsm" : "X_umap",
+            "layers" : "logcounts",
+            "reference" : "malignant melanoma"
+      },
+      "Cancer_OVA" : {
+            "path"  : "/work/leilab/yangqin/Project/10_webapp/Webapp_scRNAseq/inputData/scrna_4_annotation.h5ad",
+            "type" : "celltype",
+            "obsm" : "X_umap",
+            "layers" : "logcounts",
+            "reference" : "Ovary Cancer From ZengLab"
+      },  
+      "adipose_DataSet2" : {
+            "path"  : "/work/leilab/yangqin/Project/3_singcellseq/7_stemcell/results/adipose/GSE198482/Wnt_adipose.h5ad",
+            "type" : "my_cluster",
+            "obsm" : "X_pca",
+            "layers" : "logcounts",
+            "reference" : "Yang Loureiro, Z., Joyce, S., DeSouza, T. et al. Wnt signaling preserves progenitor cell multipotency during adipose tissue development. Nat Metab 5, 1014-1028 (2023). https://doi.org/10.1038/s42255-023-00813-y"
+      },
+      "HSC_iPSC" : {
+            "path"  : "/work/leilab/yangqin/Project/3_singcellseq/7_stemcell/results/SVZ/GSE144462/adata_merge.h5ad",
+            "type" : "Ident",
+            "obsm" : "X_umap",
+            "layers" : "logcounts",
+            "reference" : "Piau, Olivier et al. \"Generation of transgene-free hematopoietic stem cells from human induced pluripotent stem cells.\" Cell stem cell vol. 30,12 (2023): 1610-1623.e7. doi:10.1016/j.stem.2023.11.002"
+      },
+      "HSC_CD34" : {
+            "path"  : "/work/leilab/yangqin/Project/10_webapp/Webapp_scRNAseq/inputData/CD34_20231216.h5ad",
+            "type" : "predicted.cell_type",
+            "obsm" : "REF.UMAP",
+            "layers" : "logcounts",
+            "reference" : "Data From Leilab (magnetic-activated cell sorting)"
+      },
+      "HSCs_3a" : {
+            "path"  : "/work/leilab/yangqin/Project/3_singcellseq/7_stemcell/results/HSC/GSE192519/adata_3a_scanpy.h5ad",
+            "type" : "my_cluster",
+            "obsm" : "X_umap",
+            "layers" : "logcounts",
+            "reference" : "Sakurai M, Ishitsuka K, Ito R, Wilkinson AC et al. Chemically defined cytokine-free expansion of human haematopoietic stem cells. Nature 2023 Mar;615(7950):127-133."
+      },
+      "HSCs_SR-1" : {
+            "path"  : "/work/leilab/yangqin/Project/3_singcellseq/7_stemcell/results/HSC/GSE192519/adata_SR1_scanpy.h5ad",
+            "type" : "my_cluster",
+            "obsm" : "X_umap",
+            "layers" : "logcounts",
+            "reference" : "Sakurai M, Ishitsuka K, Ito R, Wilkinson AC et al. Chemically defined cytokine-free expansion of human haematopoietic stem cells. Nature 2023 Mar;615(7950):127-133."
+      },
+      "HSCs_UM171" : {
+            "path"  : "/work/leilab/yangqin/Project/3_singcellseq/7_stemcell/results/HSC/GSE192519/adata_UM171_scanpy.h5ad",
+            "type" : "my_cluster",
+            "obsm" : "X_umap",
+            "layers" : "logcounts",
+            "reference" : "Sakurai M, Ishitsuka K, Ito R, Wilkinson AC et al. Chemically defined cytokine-free expansion of human haematopoietic stem cells. Nature 2023 Mar;615(7950):127-133."
+      },
+      "Limb" : {
+            "path"  : "/work/leilab/yangqin/Project/3_singcellseq/7_stemcell/results/limb/221024LimbCellranger3annotated_filtered_adjusted_20221124.minimal.h5ad",
+            "type" : "celltype",
+            "obsm" : "X_umap",
+            "layers" : "normalized",
+            "reference" : "Zhang, B., He, P., Lawrence, J.E.G. et al. A human embryonic limb cell atlas resolved in space and time. Nature (2023). https://doi.org/10.1038/s41586-023-06806-x"
+      },
+      "HSC_CD34_FACS_P0" : {
+            "path"  : "/work/leilab/yangqin/Project/10_webapp/Webapp_scRNAseq/inputData/CD34_12_anno.h5ad",
+            "type" : "celltype",
+            "obsm" : "X_umap",
+            "layers" : "logcounts",
+            "reference" : "Data From Leilab (fluorescence-activated cell sorting)"
+      },
+      "HSC_CD34_FACS_P3" : {
+            "path"  : "/work/leilab/yangqin/Project/10_webapp/Webapp_scRNAseq/inputData/CD34_14_anno.h5ad",
+            "type" : "celltype",
+            "obsm" : "X_umap",
+            "layers" : "logcounts",
+            "reference" : "Data From Leilab FASC P3"
+      },
+
+      "macaque_testis" : {
+            "path"  : "/work/leilab/yangqin/Project/10_webapp/Webapp_scRNAseq/inputData/macaque_testis.h5ad",
+            "type" : "celltype_qin",
+            "obsm" : "X_umap",
+            "layers" : "logcounts",
+            "reference" : "Murat, F., Mbengue, N., Winge, S.B. et al. The molecular evolution of spermatogenesis across mammals. Nature 613, 308–316 (2023). https://doi.org/10.1038/s41586-022-05547-7"
+      },
+      "lemur_testis" : {
+            "path"  : "/work/leilab/yangqin/Project/10_webapp/Webapp_scRNAseq/inputData/lemur_testis.h5ad",
+            "type" : "celltype_qin",
+            "obsm" : "X_umap",
+            "layers" : "logcounts",
+            "reference" : "Murat, F., Mbengue, N., Winge, S.B. et al. The molecular evolution of spermatogenesis across mammals. Nature 613, 308–316 (2023). https://doi.org/10.1038/s41586-022-05547-7"
+      },
+      "pig_testis" : {
+            "path"  : "/work/leilab/yangqin/Project/10_webapp/Webapp_scRNAseq/inputData/pig_testis.h5ad",
+            "type" : "celltype_qin",
+            "obsm" : "X_umap",
+            "layers" : "logcounts",
+            "reference" : "Murat, F., Mbengue, N., Winge, S.B. et al. The molecular evolution of spermatogenesis across mammals. Nature 613, 308–316 (2023). https://doi.org/10.1038/s41586-022-05547-7"
+      }
+}
+
