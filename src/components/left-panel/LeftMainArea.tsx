@@ -2,13 +2,12 @@ import Image from "next/image";
 
 export function LeftMainArea() {
   return (
-    <div className="flex-[5] min-w-0">
+    <div className="flex-1 min-w-0 h-full relative">
       <Image
-        src="/8146bbb02c2c76f3a5fb7787922b9ab3.jpg"
+        src="/29872af2fada2ee3fa9adf014a243492.jpg"
         alt="主要区域图片"
-        width={800}
-        height={600}
-        className="w-full h-full object-contain"
+        fill
+        className="object-cover"
       />
     </div>
   );
