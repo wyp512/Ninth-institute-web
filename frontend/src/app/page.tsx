@@ -1,7 +1,7 @@
-import { LeftPanel } from "@/components/panels/LeftPanel";
-import { RightPanel } from "@/components/panels/RightPanel";
-import { TopBar } from "@/components/panels/TopBar";
-import { DatasetSelector } from "@/components/panels/DatasetSelector";
+import { LeftPanel } from "@/components/sections/LeftPanel";
+import { RightPanel } from "@/components/sections/RightPanel";
+import { TopBar } from "@/components/sections/TopBar";
+import { DatasetSelector } from "@/components/sections/DatasetSelector";
 
 export default function Home() {
   return (
