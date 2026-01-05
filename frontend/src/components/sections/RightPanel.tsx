@@ -1,7 +1,12 @@
+"use client";
+
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { useDataset } from "@/contexts/DatasetContext";
 
 export function RightPanel() {
+  const { selectedDataset, selectedName } = useDataset();
+
   const tabTriggerClass = `
     rounded-none px-4 py-2 relative
     border border-transparent
@@ -29,7 +34,18 @@ export function RightPanel() {
         <TabsContent value="overview" className={tabContentClass}>
           <ScrollArea className="h-full">
             <div className="p-4">
-              <p className="text-muted-foreground">Overview 内容区域</p>
+              {selectedDataset ? (
+                <div className="space-y-2">
+                  <h3 className="font-medium text-foreground">
+                    {selectedName}
+                  </h3>
+                  <p className="text-muted-foreground">
+                    {selectedDataset.reference}
+                  </p>
+                </div>
+              ) : (
+                <p className="text-muted-foreground">请选择一个数据集</p>
+              )}
             </div>
           </ScrollArea>
         </TabsContent>
@@ -55,4 +71,3 @@ export function RightPanel() {
     </section>
   );
 }
-

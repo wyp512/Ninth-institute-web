@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import {
   Select,
   SelectContent,
@@ -8,26 +7,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { getDatasetNames } from "@/lib/services/datasetService";
+import { useDataset } from "@/contexts/DatasetContext";
 
 export function DatasetSelector() {
-  const [datasetNames, setDatasetNames] = useState<string[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    async function fetchDatasets() {
-      try {
-        const names = await getDatasetNames();
-        setDatasetNames(names);
-      } catch (error) {
-        console.error("获取数据集列表失败:", error);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchDatasets();
-  }, []);
+  const { datasetNames, selectedName, setSelectedName, loading } = useDataset();
 
   return (
     <div className="w-1/2 px-4 py-4">
@@ -35,7 +18,11 @@ export function DatasetSelector() {
         <label className="text-sm font-medium text-foreground whitespace-nowrap">
           Dataset:
         </label>
-        <Select disabled={loading}>
+        <Select
+          disabled={loading}
+          value={selectedName || undefined}
+          onValueChange={setSelectedName}
+        >
           <SelectTrigger className="flex-1">
             <SelectValue placeholder={loading ? "加载中..." : "选择数据集..."} />
           </SelectTrigger>
@@ -51,4 +38,3 @@ export function DatasetSelector() {
     </div>
   );
 }
-
