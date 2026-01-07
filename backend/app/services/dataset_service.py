@@ -1,7 +1,7 @@
 """数据集服务"""
 import json
 import os
-from typing import Dict, List, Optional
+from typing import Dict
 from ..config import get_settings
 from ..models.dataset import Dataset
 
@@ -28,16 +28,6 @@ class DatasetService:
         except Exception as e:
             print(f"读取数据集失败: {e}")
             return {}
-    
-    def get_dataset_names(self) -> List[str]:
-        """获取数据集名称列表"""
-        datasets = self.get_all_datasets()
-        return list(datasets.keys())
-    
-    def get_dataset_by_name(self, name: str) -> Optional[Dataset]:
-        """根据名称获取单个数据集"""
-        datasets = self.get_all_datasets()
-        return datasets.get(name)
 
 
 # 创建服务单例

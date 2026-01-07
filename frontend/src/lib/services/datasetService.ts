@@ -23,11 +23,3 @@ export async function getDatasets(): Promise<DatasetsResponse> {
   return response.json();
 }
 
-// 获取数据集名称列表
-export async function getDatasetNames(): Promise<string[]> {
-  const result = await getDatasets();
-  if (result.success && result.data) {
-    return result.data.names;
-  }
-  return [];
-}

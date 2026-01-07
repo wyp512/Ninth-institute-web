@@ -5,7 +5,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { useDataset } from "@/contexts/DatasetContext";
 
 export function RightPanel() {
-  const { selectedDataset, selectedName } = useDataset();
+  const { selectedDataset } = useDataset();
 
   const tabTriggerClass = `
     rounded-none px-4 py-2 relative
@@ -35,14 +35,9 @@ export function RightPanel() {
           <ScrollArea className="h-full">
             <div className="p-4">
               {selectedDataset ? (
-                <div className="space-y-2">
-                  <h3 className="font-medium text-foreground">
-                    {selectedName}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {selectedDataset.reference}
-                  </p>
-                </div>
+                <p className="text-muted-foreground">
+                  {selectedDataset.reference}
+                </p>
               ) : (
                 <p className="text-muted-foreground">请选择一个数据集</p>
               )}
